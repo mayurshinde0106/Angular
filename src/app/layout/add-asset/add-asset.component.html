@@ -1,0 +1,36 @@
+
+<p style="text-align: center;">add-asset </p>
+
+<div style="margin-left: 600px;margin-top: 90px">
+    <h2>Login</h2>
+    <form (ngSubmit)="onSubmit()">
+      <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" [(ngModel)]="asset.Name" required>
+      </div>
+      <div>
+        <label for="category">Category:</label>
+        <input type="text" id="category" name="category" [(ngModel)]="asset.Category" required>
+      </div>
+      <div>
+        <label for="condition">Condition:</label>
+        <input type="text" id="condition" name="condition" [(ngModel)]="asset.Condition" required>
+      </div>
+      <div>
+        <label for="cost">  Cost:</label>
+        <input type="number" id="cost" name="cost" [(ngModel)]="asset.Cost" required>
+      </div>
+      <div>
+        <label for="location"> Location:</label>
+        <input type="text" id="location" name="location" [(ngModel)]="asset.Location" required>
+      </div>
+      <div>
+        <label for="status"> Status:  </label>
+        <input type="text" id="status" name="status" [(ngModel)]="asset.Status" required>
+      </div>
+      <button type="submit">Add</button>
+    </form>
+    <!-- <div *ngIf="errorMessage" class="error">{{ errorMessage }}</div>
+    <div *ngIf="successMessage" class="error">{{ successMessage  }}</div> -->
+  </div>
+   

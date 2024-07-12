@@ -1,0 +1,36 @@
+<!-- src/app/item-list/item-list.component.html -->
+<div class="asset-list-div">
+    <h2>Asset List</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Asset ID</th>
+          <th>Name</th>
+          <th>Category</th>
+          <th>Condition</th>
+          <th>Cost</th>
+          <th>Location</th>
+          <th>Purchase Date</th>
+          <th> Update </th>
+        </tr>
+       </thead>
+
+      <tbody>
+        <tr *ngFor="let item of items">
+          <td (click)="deleteClick(item.AssetId)">{{ item.AssetId }}</td>
+          <td>{{ item.Name }}</td>
+          <td>{{ item.Category }}</td>
+          <td>{{ item.Condition }}</td>
+          <td>{{ item.Cost }}</td>
+          <td>{{ item.Location }}</td>
+          <td>{{ item.PurchaseDate }}</td>
+          <td (click)="assetClick( item)">update</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <app-update-asset *ngIf="navigateFlag" [responseData]="AssetDataList">
+
+  </app-update-asset>
+  
